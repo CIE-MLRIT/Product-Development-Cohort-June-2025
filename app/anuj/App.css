@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #4e89ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+button.grow {
+  transform: scale(1.2);
+}
