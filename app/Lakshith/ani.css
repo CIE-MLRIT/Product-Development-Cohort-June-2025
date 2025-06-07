@@ -1,0 +1,107 @@
+
+.sma-page {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+  min-height: 100vh;
+  color: #1f2937;
+  overflow-x: hidden;
+  animation: fade-in 2s ease-in;
+}
+
+.sma-hero {
+  height: 100vh;
+  position: relative;
+  background: url('/bg-light.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: background-fade 6s ease-in-out infinite alternate;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  animation: float-in 1.8s ease-in-out;
+}
+
+.hero-content h1 {
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.quote {
+  color: #374151;
+  margin-top: 1rem;
+  font-style: italic;
+  font-weight: 500;
+  animation: fade-in-text 3s ease;
+}
+
+.sma-body {
+  padding: 4rem 2rem;
+  animation: slide-up 1.5s ease-out;
+}
+
+.values {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  font-size: 1.25rem;
+  font-weight: 600;
+  min-width: 160px;
+  text-align: center;
+  color: #1f2937;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to top right, #dbeafe, #ede9fe);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-in-text {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(60px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float-in {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes background-fade {
+  0% { background-position: center top; }
+  100% { background-position: center bottom; }
+}
