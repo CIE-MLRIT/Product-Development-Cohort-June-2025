@@ -59,7 +59,7 @@ const LoginPage: React.FC = () => {
       if (success) {
         addNotification({
           type: 'success',
-          title: 'Welcome back!,hello',
+          title: 'Welcome back!,hello.',
           message: 'You have been logged in successfully.',
         });
         navigate('/courts');
